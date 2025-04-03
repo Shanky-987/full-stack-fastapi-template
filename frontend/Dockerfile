@@ -9,8 +9,11 @@ RUN npm install
 
 COPY ./ /app/
 
+COPY .env /app/.env
+
 ARG VITE_API_URL=${VITE_API_URL}
 
+RUN echo "shashank --- ${VITE_API_URL}"
 RUN npm run build
 
 
